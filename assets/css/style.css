@@ -1,0 +1,335 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body Styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f9;
+    color: #333;
+    padding: 20px;
+    scroll-behavior: smooth;
+}
+
+/* Header Styles */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color:  #6200ea;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    padding: 0.5rem 0;
+}
+
+header h1 {
+    font-size: 2.5rem;
+    font-weight: 600;
+}
+
+/* Section Titles */
+section h2 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+    color: #6200ea;
+    border-bottom: 2px solid #6200ea;
+    display: inline-block;
+    padding-bottom: 5px;
+}
+
+/* About Section */
+#about {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 70vh; /* Full viewport height */
+    padding: 20px;
+    background-color: #f5f5f5; /* Light background */
+    font-family: 'Poppins', sans-serif;
+}
+
+#about h2 {
+    font-size: 3.5rem;
+    font-weight: 900;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+#about p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    color: #555;
+    margin-bottom: 30px;
+    max-width: 600px;
+}
+
+.download-btn {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 1rem;
+    font-weight: 600;
+    color: #fff;
+    background-color: #4e0fa6; /* Button color */
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.download-btn:hover {
+    background-color: #6200ea; /* Darker blue on hover */
+}
+
+/* scroll below button */
+
+.mouse-scroll {
+    position: absolute;
+    bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.mouse {
+    width: 35px;
+    height: 55px;
+    border: 2px solid #481b87;
+    border-radius: 25px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.mouse .scroll {
+    width: 6px;
+    height: 10px;
+    background-color: #6200ea;;
+    border-radius: 50%;
+    animation: scroll-animation 1.5s infinite;
+}
+
+.mouse-scroll p {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #007bff;
+    margin-top: 10px;
+    animation: fade-in-out 2s infinite;
+}
+
+@keyframes scroll-animation {
+    0% {
+        transform: translateY(5px);
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(-5px);
+        opacity: 0;
+    }
+}
+
+@keyframes fade-in-out {
+    0%, 100% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+}
+
+/* Social accounts */
+
+/* Social Media Icons */
+.social-icons {
+    position: fixed;
+    top: 50%;
+    left: 10px;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    z-index: 1000;
+}
+
+.social-icons .icon {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #007bff;
+    border-radius: 50%;
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.5rem;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.social-icons .icon:hover {
+    transform: scale(1.2);
+    background-color: #0056b3;
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Specific Colors for Each Icon */
+.icon.twitter {
+    background-color: #1da1f2;
+}
+
+.icon.twitter:hover {
+    background-color: #0d8bde;
+}
+
+.icon.linkedin {
+    background-color: #0077b5;
+}
+
+.icon.linkedin:hover {
+    background-color: #005582;
+}
+
+.icon.github {
+    background-color: #333;
+}
+
+.icon.github:hover {
+    background-color: #000;
+}
+
+.icon.youtube {
+    background-color: #ff0000;
+}
+
+.icon.youtube:hover {
+    background-color: #cc0000;
+}
+
+/* Skills and Experience Containers */
+.container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    margin-top: 20px;
+}
+
+/* Card Styles */
+.card {
+    background: #fff;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+.card h3 {
+    color: #333;
+    margin-bottom: 10px;
+    font-size: 1.2rem;
+}
+
+.card p, .card ul {
+    font-size: 0.9rem;
+    color: #555;
+}
+
+/* List Styles */
+.card ul {
+    list-style-type: disc;
+    padding-left: 20px;
+}
+
+/* Footer Styles */
+footer {
+    margin-top: 30px;
+    text-align: center;
+    font-size: 0.9rem;
+    color: #555;
+}
+
+footer p {
+    margin: 5px 0;
+}
+
+footer a {
+    color: #6200ea;
+    text-decoration: none;
+}
+
+.navbar {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    margin: 0;
+    padding: 10px 0;
+}
+
+.navbar li {
+    margin: 0 15px;
+    position: relative;
+}
+
+.navbar a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 600;
+    padding: 5px 10px;
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+.navbar a:hover {
+    color: #00aaff;
+}
+
+/* Hover Animation: Border from Left to Right */
+.navbar a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: #00aaff;
+    transition: width 0.3s ease;
+}
+
+.navbar a:hover::after {
+    width: 100%;
+}
+
+/* Section Spacing */
+section {
+    padding: 100px 20px;
+    margin-top: 60px; /* Offset for fixed header */
+}
+
+#home {
+    padding-top: 80px;
+    margin-top: -60px; /* Offset for navigation */
+}
+
+footer {
+    margin-top: 20px;
+    text-align: center;
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+}
